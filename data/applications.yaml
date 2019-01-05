@@ -34,7 +34,12 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Office\*\*\Place MRU', value: 'Item *'}
   supported_os: [Windows]
 supported_os: [Darwin, Windows]
-urls: ['https://github.com/mac4n6/macMRU-Parser']
+urls:
+-  'https://github.com/mac4n6/macMRU-Parser'
+-  'https://attack.mitre.org/techniques/T1083/'
+-  'https://attack.mitre.org/techniques/T1005/'
+-  'https://attack.mitre.org/techniques/T1039/'
+-  'https://attack.mitre.org/techniques/T1039/'
 ---
 name: MicrosoftOutlookPABFiles
 doc: Microsoft Outlook PAB Files
