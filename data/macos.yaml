@@ -10,6 +10,8 @@ supported_os: [Darwin]
 urls:
 - 'http://forensicswiki.org/wiki/Mac_OS_X'
 - 'http://forensicswiki.org/wiki/Mac_OS_X_10.9_-_Artifacts_Location#System_Logs'
+- 'https://attack.mitre.org/techniques/T1078/'
+- 'https://attack.mitre.org/techniques/T1098/'
 ---
 name: MacOSApplications
 doc: Applications

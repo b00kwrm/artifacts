@@ -29,7 +29,10 @@ sources:
   supported_os: [Darwin,Linux]
 supported_os: [Darwin,Linux,Windows]
 labels: [Cloud Storage]
-urls: ['http://www.forensicswiki.org/wiki/Dropbox']
+urls:
+- 'http://www.forensicswiki.org/wiki/Dropbox'
+- 'https://attack.mitre.org/techniques/T1083/'
+- 'https://attack.mitre.org/techniques/T1039/'
 ---
 name: GoogleDriveClient
 doc: Google Drive cloud storage client artifacts.
@@ -57,7 +60,10 @@ sources:
   supported_os: [Darwin]
 supported_os: [Darwin, Windows]
 labels: [Cloud Storage]
-urls: ['http://www.forensicswiki.org/wiki/Google_Drive']
+urls:
+- 'http://www.forensicswiki.org/wiki/Google_Drive'
+- 'https://attack.mitre.org/techniques/T1083/'
+- 'https://attack.mitre.org/techniques/T1039/'
 ---
 name: SkyDriveClient
 doc: |
@@ -77,4 +83,7 @@ sources:
   supported_os: [Windows]
 supported_os: [Windows]
 labels: [Cloud Storage]
-urls: ['http://forensicswiki.org/wiki/One_Drive#Sky_Drive_client']
+urls:
+- 'http://forensicswiki.org/wiki/One_Drive#Sky_Drive_client'
+- 'https://attack.mitre.org/techniques/T1083/'
+- 'https://attack.mitre.org/techniques/T1039/'
