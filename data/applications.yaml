@@ -53,8 +53,8 @@ sources:
 labels: [Users, Mail]
 supported_os: [Windows]
 urls:
--  'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
--  'https://attack.mitre.org/techniques/T1114/'
+- 'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
+- 'https://attack.mitre.org/techniques/T1114/'
 ---
 name: MicrosoftOutlookPSTFiles
 doc: Microsoft Outlook PST Files
@@ -68,8 +68,8 @@ sources:
 labels: [Users, Mail]
 supported_os: [Windows]
 urls:
--  'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
--  'https://attack.mitre.org/techniques/T1114/'
+- 'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
+- 'https://attack.mitre.org/techniques/T1114/'
 ---
 name: MicrosoftOutlookOSTFiles
 doc: Microsoft Outlook OST Files
@@ -83,8 +83,8 @@ sources:
 labels: [Users, Mail]
 supported_os: [Windows]
 urls:
--  'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
--  'https://attack.mitre.org/techniques/T1114/'
+- 'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
+- 'https://attack.mitre.org/techniques/T1114/'
 ---
 name: WinRARExternalViewer
 doc: Executable run when a file is opened by WinRAR inside an archive.
@@ -95,6 +95,7 @@ supported_os: [Windows]
 urls:
 - 'http://www.hexacorn.com/blog/2012/09/16/beyond-good-ol-run-key-part-2/'
 - 'http://acritum.com/software/manuals/winrar/html/helpinterfaceviewing.htm'
+- 'https://attack.mitre.org/techniques/T1204/'
 ---
 name: WinRARAVScan
 doc: Executable run to scan a file when it is opened by WinRAR.
@@ -105,3 +106,4 @@ supported_os: [Windows]
 urls:
 - 'http://www.hexacorn.com/blog/2012/09/16/beyond-good-ol-run-key-part-2/'
 - 'http://acritum.com/software/manuals/winrar/html/helpcommandsvirusscan.htm'
+- 'https://attack.mitre.org/techniques/T1204/'
