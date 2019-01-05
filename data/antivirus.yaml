@@ -7,6 +7,14 @@ sources:
   attributes: {paths: ['/Library/Application Support/ESET/esets/cache/quarantine/*']}
 supported_os: [Darwin]
 labels: [Antivirus]
+urls:
+-  'https://attack.mitre.org/techniques/T1204/'
+-  'https://attack.mitre.org/techniques/T1014/'
+-  'https://attack.mitre.org/techniques/T1193/'
+-  'https://attack.mitre.org/techniques/T1189/'
+-  'https://attack.mitre.org/techniques/T1068/'
+-  'https://attack.mitre.org/techniques/T1211/'
+-  'https://attack.mitre.org/techniques/T1212/'
 ---
 name: MicrosoftAVQuarantine
 doc: Microsoft Anti-Virus Quarantine (Infected) files.
@@ -19,6 +27,14 @@ sources:
     separator: '\'
 supported_os: [Windows]
 labels: [Antivirus]
+urls:
+-  'https://attack.mitre.org/techniques/T1204/'
+-  'https://attack.mitre.org/techniques/T1014/'
+-  'https://attack.mitre.org/techniques/T1193/'
+-  'https://attack.mitre.org/techniques/T1189/'
+-  'https://attack.mitre.org/techniques/T1068/'
+-  'https://attack.mitre.org/techniques/T1211/'
+-  'https://attack.mitre.org/techniques/T1212/'
 ---
 name: SophosAVLogs
 doc: Sophos Anti-Virus log files.
@@ -33,6 +49,14 @@ sources:
   supported_os: [Windows]
 supported_os: [Darwin, Windows]
 labels: [Antivirus, Logs]
+urls:
+-  'https://attack.mitre.org/techniques/T1204/'
+-  'https://attack.mitre.org/techniques/T1014/'
+-  'https://attack.mitre.org/techniques/T1193/'
+-  'https://attack.mitre.org/techniques/T1189/'
+-  'https://attack.mitre.org/techniques/T1068/'
+-  'https://attack.mitre.org/techniques/T1211/'
+-  'https://attack.mitre.org/techniques/T1212/'
 ---
 name: SophosAVQuarantine
 doc: Sophos Anti-Virus Quarantine (Infected) files.
@@ -47,6 +71,14 @@ sources:
   supported_os: [Windows]
 supported_os: [Darwin, Windows]
 labels: [Antivirus]
+urls:
+-  'https://attack.mitre.org/techniques/T1204/'
+-  'https://attack.mitre.org/techniques/T1014/'
+-  'https://attack.mitre.org/techniques/T1193/'
+-  'https://attack.mitre.org/techniques/T1189/'
+-  'https://attack.mitre.org/techniques/T1068/'
+-  'https://attack.mitre.org/techniques/T1211/'
+-  'https://attack.mitre.org/techniques/T1212/'
 ---
 name: SymantecAVLogs
 doc: Symantec Anti-Virus Log Files.
@@ -60,6 +92,14 @@ sources:
   supported_os: [Windows]
 supported_os: [Windows]
 labels: [Antivirus, Logs]
+urls:
+-  'https://attack.mitre.org/techniques/T1204/'
+-  'https://attack.mitre.org/techniques/T1014/'
+-  'https://attack.mitre.org/techniques/T1193/'
+-  'https://attack.mitre.org/techniques/T1189/'
+-  'https://attack.mitre.org/techniques/T1068/'
+-  'https://attack.mitre.org/techniques/T1211/'
+-  'https://attack.mitre.org/techniques/T1212/'
 ---
 name: SymantecAVQuarantine
 doc: Symantec Anti-Virus Quarantine (Infected) files.
@@ -71,3 +111,11 @@ sources:
   supported_os: [Windows]
 supported_os: [Windows]
 labels: [Antivirus, Logs]
+urls:
+-  'https://attack.mitre.org/techniques/T1204/'
+-  'https://attack.mitre.org/techniques/T1014/'
+-  'https://attack.mitre.org/techniques/T1193/'
+-  'https://attack.mitre.org/techniques/T1189/'
+-  'https://attack.mitre.org/techniques/T1068/'
+-  'https://attack.mitre.org/techniques/T1211/'
+-  'https://attack.mitre.org/techniques/T1212/'
