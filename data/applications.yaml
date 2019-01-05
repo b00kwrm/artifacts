@@ -13,7 +13,9 @@ sources:
     separator: '\'
   supported_os: [Windows]
 supported_os: [Darwin, Linux, Windows]
-urls: ['https://docs.npmjs.com/cli/cache']
+urls:
+-  'https://docs.npmjs.com/cli/cache'
+-  'https://attack.mitre.org/techniques/T1195/'
 ---
 name: MicrosoftOfficeMRU
 doc: Microsoft Office Most Recently Used

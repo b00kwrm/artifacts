@@ -5,14 +5,14 @@
 import glob
 import os
 import unittest
+import yaml
+import urllib.parse
 
 from artifacts import definitions
 from artifacts import errors
 from artifacts import reader
 
 from tests import test_lib
-
-import yaml
 
 class MitreAttackURLTest(test_lib.BaseTestCase):
   """Class to test if the mitre attack url is inlcuded in artifact."""
@@ -25,8 +25,8 @@ class MitreAttackURLTest(test_lib.BaseTestCase):
             my_artifacts = list(yml_file_load)
             for artifact in my_artifacts:
                 if artifact.get('urls'):
-                    for url in artifact.get('urls'):
-                        self.assertIn("attack.mitre.org", url, msg='add mitre url to {} in {}.'.format(artifact['name'], artifacts_file))
+                  netlocs = [urllib.parse.urlparse(url).netloc for url in artifact.get('urls')]
+                  self.assertIn("attack.mitre.org", netlocs, msg='add mitre url to {} in {}.'.format(artifact['name'], artifacts_file))
                         
 if __name__ == '__main__':
   unittest.main()
