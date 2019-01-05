@@ -27,6 +27,8 @@ class MitreAttackURLTest(test_lib.BaseTestCase):
                 if artifact.get('urls'):
                   netlocs = [urllib.parse.urlparse(url).netloc for url in artifact.get('urls')]
                   self.assertIn("attack.mitre.org", netlocs, msg='add mitre url to {} in {}.'.format(artifact['name'], artifacts_file))
+                else:
+                  self.assertIsNotNone(artifact.get('urls'), msg='add mitre url to {} in {}'.format(artifact['name'], artifacts_file))
                         
 if __name__ == '__main__':
   unittest.main()
