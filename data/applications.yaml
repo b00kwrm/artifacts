@@ -52,7 +52,9 @@ sources:
     separator: '/'
 labels: [Users, Mail]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)']
+urls:
+-  'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
+-  'https://attack.mitre.org/techniques/T1114/'
 ---
 name: MicrosoftOutlookPSTFiles
 doc: Microsoft Outlook PST Files
@@ -65,7 +67,9 @@ sources:
     separator: '/'
 labels: [Users, Mail]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)']
+urls:
+-  'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
+-  'https://attack.mitre.org/techniques/T1114/'
 ---
 name: MicrosoftOutlookOSTFiles
 doc: Microsoft Outlook OST Files
@@ -78,7 +82,9 @@ sources:
     separator: '/'
 labels: [Users, Mail]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)']
+urls:
+-  'http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)'
+-  'https://attack.mitre.org/techniques/T1114/'
 ---
 name: WinRARExternalViewer
 doc: Executable run when a file is opened by WinRAR inside an archive.
