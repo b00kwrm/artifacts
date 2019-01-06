@@ -14,6 +14,7 @@ urls:
 - 'https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~DwnLdr-GWV/detailed-analysis.aspx'
 - 'https://support.microsoft.com/en-us/kb/929200'
 - 'https://en.wikipedia.org/wiki/Active_Desktop'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsActivitiesCache
 doc: |
@@ -30,6 +31,8 @@ supported_os: [Windows]
 urls:
 - 'https://cclgroupltd.com/windows-10-timeline-forensic-artefacts/'
 - 'https://salt4n6.com/2018/05/03/windows-10-timeline-forensic-artefacts/amp/'
+- 'https://attack.mitre.org/techniques/T1083/'
+- 'https://attack.mitre.org/techniques/T1005/'
 ---
 name: WindowsAlternateShell
 doc: Alternate Shell to be run via Userinit.
@@ -44,6 +47,7 @@ urls:
 - 'https://www.microsoftpressstore.com/articles/article.aspx'
 - 'https://technet.microsoft.com/en-us/library/cc976124.aspx'
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsAMCacheHveFile
 doc: The AMCache.hve Windows NT Registry file.
@@ -54,7 +58,9 @@ sources:
     separator: '\'
 conditions: [os_major_version >= 6 AND os_minor_version >= 1]
 supported_os: [Windows]
-urls: ['http://www.swiftforensics.com/2013/12/amcachehve-in-windows-8-goldmine-for.html']
+urls:
+- 'http://www.swiftforensics.com/2013/12/amcachehve-in-windows-8-goldmine-for.html'
+- 'https://attack.mitre.org/techniques/T1204/'
 ---
 name: WindowsAppCertDLLs
 doc: Windows AppCertDLLs persistence.
@@ -63,7 +69,9 @@ sources:
   attributes:
     keys: ['HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\AppCertDLLs']
 supported_os: [Windows]
-urls: ['http://blogs.technet.com/b/mmpc/archive/2011/03/19/how-to-defang-the-fake-defragmenter.aspx']
+urls:
+- 'http://blogs.technet.com/b/mmpc/archive/2011/03/19/how-to-defang-the-fake-defragmenter.aspx'
+- 'https://attack.mitre.org/techniques/T1182/'
 ---
 name: WindowsAppCompatCache
 doc: Windows Application Compatibility Cache
@@ -74,7 +82,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\AppCompatibility', value: 'AppCompatCache'}
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\AppCompatCache', value: 'AppCompatCache'}
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/Application%20Compatibility%20Cache%20key.asciidoc']
+urls:
+- 'https://github.com/libyal/winreg-kb/blob/master/documentation/Application%20Compatibility%20Cache%20key.asciidoc'
+- 'https://attack.mitre.org/techniques/T1138/'
 ---
 name: WindowsAppInitDLLs
 doc: |
@@ -94,6 +104,7 @@ supported_os: [Windows]
 urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/dd744762(v=vs.85).aspx'
 - 'https://support.microsoft.com/en-us/kb/197571'
+- 'https://attack.mitre.org/techniques/T1103/'
 ---
 name: WindowsApplicationRegistration
 doc: Windows Application Registration (AppPath) Registry keys.
@@ -108,6 +119,7 @@ urls:
 - 'https://github.com/keydet89/RegRipper2.8/blob/master/plugins/apppaths.pl'
 - 'http://www.hexacorn.com/blog/2013/01/19/beyond-good-ol-run-key-part-3/'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ee872121(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1034/'
 ---
 name: WinAppXRT
 doc: WinAppXRT DLL loaded by .Net applications when the APPX_PROCESS environment variable is set.
@@ -121,7 +133,9 @@ sources:
     - '%%environ_systemroot%%\System32\WindowsPowerShell\v1.0\WinAppXRT.dll'
 supported_os: [Windows]
 conditions: [os_major_version >= 6 AND os_minor_version >= 2]
-urls: ['http://www.hexacorn.com/blog/2014/08/31/beyond-good-ol-run-key-part-17/']
+urls:
+- 'http://www.hexacorn.com/blog/2014/08/31/beyond-good-ol-run-key-part-17/'
+- 'https://attack.mitre.org/techniques/T1038/'
 ---
 name: WindowsAutoexecBat
 doc: Windows autoexec.bat file
@@ -133,6 +147,7 @@ sources:
       - '%%environ_windir%%\autoexec.nt'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/tactics/TA0003/']
 ---
 name: WindowsAutomaticDebugging
 doc: Windows automatic debugging (Aedebug)

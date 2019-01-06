@@ -16,3 +16,4 @@ sources:
     separator: '\'
 labels: [System]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1096/']
