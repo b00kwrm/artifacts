@@ -19,7 +19,7 @@ class MitreAttackURLTest(test_lib.BaseTestCase):
 
   def testForMitreAttackURL(self):
     """Checks for Mitre Attack URL in artifacts."""
-    for artifacts_file in glob.glob(os.path.join('data', '*.yaml')):
+    for artifacts_file in glob.glob(os.path.join('data', 'windows.yaml')):
         with open(artifacts_file, 'rb') as yml_file:
             yml_file_load = yaml.safe_load_all(yml_file)
             my_artifacts = list(yml_file_load)
