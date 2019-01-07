@@ -160,6 +160,7 @@ supported_os: [Windows]
 urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb204634(v=vs.85).aspx'
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
+- 'https://attack.mitre.org/techniques/T1183/'
 ---
 name: WindowsAutomaticDebuggingExclusionList
 doc: Windows automatic debugging (Aedebug) exclusion list
@@ -168,7 +169,9 @@ sources:
   attributes:
     keys: ['HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\AutoExclusionList\*']
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/bb204634(v=vs.85).aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb204634(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1183/'
 ---
 name: WindowsAutorun
 doc: Filebased Tests.
@@ -178,6 +181,7 @@ sources:
     paths: ['%%environ_systemdrive%%\autorun.inf']
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1091/']
 ---
 name: WindowsAvailableTimeZones
 doc: Timezones available on a Windows system.
@@ -185,7 +189,9 @@ sources:
 - type: REGISTRY_KEY
   attributes: {keys: ['HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Time Zones\*\*']}
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/wiki/Time-zone-keys']
+urls:
+- 'https://github.com/libyal/winreg-kb/wiki/Time-zone-keys'
+- 'https://attack.mitre.org/techniques/T1091/'
 ---
 name: WindowsBITSQueueManagerDatabases
 doc: Databases that contain the Windows BITS jobs definition and state.
@@ -195,7 +201,9 @@ sources:
     paths:
       - '%%environ_allusersprofile%%\Microsoft\Network\Downloader\qmgr*.dat'
 supported_os: [Windows]
-urls: ['http://dfrws.org/2015/proceedings/presentations/DFRWS2015-pres3.pdf']
+urls:
+- 'http://dfrws.org/2015/proceedings/presentations/DFRWS2015-pres3.pdf'
+- 'https://attack.mitre.org/techniques/T1197/'
 ---
 name: WindowsBootVerificationProgram
 doc: Path to custom startup verification program.
@@ -208,6 +216,7 @@ supported_os: [Windows]
 urls:
 - 'https://technet.microsoft.com/en-us/library/cc786702(WS.10).aspx'
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsCodePage
 doc: The code page of the system.
@@ -218,7 +227,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Nls\CodePage', value: 'ACP'}
 provides: [code_page]
 supported_os: [Windows]
-urls: ['http://en.wikipedia.org/wiki/Windows_code_page']
+urls:
+- 'http://en.wikipedia.org/wiki/Windows_code_page'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsComputerName
 doc: The name of the system.
@@ -228,6 +239,7 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ComputerName', value: 'ComputerName'}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1012/']
 ---
 name: WindowsCommandProcessorAutoRun
 doc: Commands that are run each time the Command Processor (Cmd.exe) is started.
@@ -245,6 +257,7 @@ urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'http://blogs.msdn.com/b/oldnewthing/archive/2007/11/21/6447771.aspx'
 - 'https://technet.microsoft.com/en-us/library/cc756720(v=ws.10).aspx'
+- 'https://attack.mitre.org/techniques/T1034/'
 ---
 name: WindowsCOMInprocHandlers
 doc: Windows COM in-process handlers
@@ -265,6 +278,7 @@ urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms694515(v=vs.85).aspx'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms691354(v=vs.85).aspx'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms693485(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1122/'
 ---
 name: WindowsCOMInprocServers
 doc: Windows COM in-process servers
@@ -285,6 +299,7 @@ urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms694515(v=vs.85).aspx'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms682390(v=vs.85).aspx'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms694328(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1122/'
 ---
 name: WindowsCOMLocalServers
 doc: Windows COM local servers
@@ -308,6 +323,7 @@ supported_os: [Windows]
 urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms694515(v=vs.85).aspx'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms686595(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1122/'
 ---
 name: WindowsCOMRegisteredTypeLibraries
 doc: Windows COM registered type libraries
@@ -320,7 +336,9 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Classes\Typelib\*\*\*\*', value: ''}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Classes\Wow6432Node\Typelib\*\*\*\*', value: ''}
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/Component%20Object%20Model%20keys.asciidoc#type-libraries-key']
+urls:
+- 'https://github.com/libyal/winreg-kb/blob/master/documentation/Component%20Object%20Model%20keys.asciidoc#type-libraries-key'
+- 'https://attack.mitre.org/techniques/T1122/'
 ---
 name: WindowsConfigSys
 doc: Windows config.sys file
@@ -332,6 +350,7 @@ sources:
       - '%%environ_windir%%\config.nt'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/tactics/TA0003/']
 ---
 name: WindowsControlPanelFilePaths
 doc: DLLs listed here will be run when the user opens the Windows Control Panel.
@@ -348,6 +367,7 @@ urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/hh127454(v=vs.85).aspx'
 - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/controlpanel.htm'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms683844(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1196/'
 ---
 name: WindowsCredentialProviderFilters
 doc: Windows Credential Provider Filters
@@ -358,7 +378,9 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Authentication\Credential Provider Filters\*'
       - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Authentication\Credential Provider Filters\*'
 supported_os: [Windows]
-urls: ['http://blog.leetsys.com/2012/01/02/capturing-windows-7-credentials-at-logon-using-custom-credential-provider/']
+urls:
+- 'http://blog.leetsys.com/2012/01/02/capturing-windows-7-credentials-at-logon-using-custom-credential-provider/'
+- 'https://attack.mitre.org/techniques/T1056/'
 ---
 name: WindowsCredentialProviders
 doc: CLSIDs of applications to use as Credential Providers
@@ -374,6 +396,7 @@ urls:
 - 'http://blogs.technet.com/b/ad/archive/2009/05/26/thoughts-on-single-sign-on-and-credential-providers.aspx'
 - 'http://blog.leetsys.com/2012/01/02/capturing-windows-7-credentials-at-logon-using-custom-credential-provider/'
 - 'https://www.sophos.com/en-us/support/knowledgebase/114190.aspx'
+- 'https://attack.mitre.org/techniques/T1056/'
 ---
 name: WindowsCommonFilePlacementAttacks
 doc: Common files associated with search order hijacking and other file placement attacks.
@@ -396,6 +419,7 @@ supported_os: [Windows]
 urls:
 - 'http://web.cs.ucdavis.edu/~su/publications/issta10-loading.pdf'
 - 'https://www.mandiant.com/blog/fxsst/'
+- 'https://attack.mitre.org/techniques/T1038/'
 ---
 name: WindowsCurrentVersion
 doc: The Windows current verson
@@ -403,7 +427,9 @@ sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'CurrentVersion'}]}
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc']
+urls:
+- 'https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc'
+- 'https://attack.mitre.org/techniques/T1038/'
 ---
 name: WindowsDebugger
 doc: Windows Debugger peristence or AV disable.
@@ -416,7 +442,9 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/a329t4ed%28VS.71%29.aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/a329t4ed%28VS.71%29.aspx'
+- 'https://attack.mitre.org/techniques/T1183/'
 ---
 name: WindowsDomainName
 doc: The domain the system is connected to.
@@ -427,6 +455,7 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters', value: 'Domain'}
 provides: [domain]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1012/']
 ---
 name: WindowsEnvironmentUserLoginScripts
 doc: User login scripts configured via Windows environment variables.
@@ -441,6 +470,7 @@ supported_os: [Windows]
 urls:
 - 'http://www.hexacorn.com/blog/2014/11/14/beyond-good-ol-run-key-part-18/'
 - 'https://social.msdn.microsoft.com/Forums/windowsdesktop/en-US/cb6f1d6f-60a6-4369-803e-ec03d902e638/gina-how-to-run-domain-scripts-after-logon'
+- 'https://attack.mitre.org/techniques/T1037/'
 ---
 name: WindowsEnvironmentVariableAllUsersAppData
 doc: The %ProgramData% environment variable.
@@ -451,7 +481,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}
 provides: [environ_allusersappdata]
 supported_os: [Windows]
-urls: ['http://environmentvariables.org/ProgramData']
+urls:
+- 'http://environmentvariables.org/ProgramData'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableProfilesDirectory
 doc: Folder that typically contains users' profile directories; default is '%SystemDrive%\Users'
@@ -466,6 +498,7 @@ urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx'
 - 'https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables'
 - 'http://support.microsoft.com/kb//214653'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableAllUsersProfile
 doc: |
@@ -483,6 +516,7 @@ urls:
 - 'https://www.microsoft.com/en-us/wdsi/help/folder-variables'
 - 'https://github.com/mirror/reactos/blob/c6d2b35ffc91e09f50dfb214ea58237509329d6b/reactos/boot/bootdata/livecd.inf'
 - 'http://support.microsoft.com/kb//214653'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableAppxProcess
 doc: |
@@ -497,7 +531,9 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Environment', value: 'APPX_PROCESS'}
 supported_os: [Windows]
 conditions: [os_major_version >= 6 AND os_minor_version >= 2]
-urls: ['http://www.hexacorn.com/blog/2014/08/31/beyond-good-ol-run-key-part-17/']
+urls:
+- 'http://www.hexacorn.com/blog/2014/08/31/beyond-good-ol-run-key-part-17/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsEnvironmentVariablePath
 doc: The %PATH% environment variable.
@@ -508,7 +544,10 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'Path'}
 provides: [environ_path]
 supported_os: [Windows]
-urls: ['http://environmentvariables.org/Path']
+urls:
+- 'http://environmentvariables.org/Path'
+- 'https://attack.mitre.org/techniques/T1034/'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableProgramFiles
 doc: The %ProgramFiles% environment variable.
@@ -523,7 +562,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'ProgramFilesDir'}
 provides: [environ_programfiles]
 supported_os: [Windows]
-urls: ['http://environmentvariables.org/ProgramFiles']
+urls:
+- 'http://environmentvariables.org/ProgramFiles'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableProgramFilesX86
 doc: The %ProgramFiles(x86)% environment variable.
@@ -538,7 +579,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'ProgramFilesDir (x86)'}
 provides: [environ_programfilesx86]
 supported_os: [Windows]
-urls: ['http://environmentvariables.org/ProgramFiles']
+urls:
+- 'http://environmentvariables.org/ProgramFiles'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableSystemDrive
 doc: |
@@ -554,6 +597,7 @@ supported_os: [Windows]
 urls:
 - 'http://environmentvariables.org/SystemDrive'
 - 'https://msdn.microsoft.com/en-us/library/cc231436.aspx'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableSystemRoot
 doc: The system root directory path, defined by %SystemRoot%, typically "C:\Windows".
@@ -572,7 +616,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'SystemRoot'}
 provides: [environ_systemroot]
 supported_os: [Windows]
-urls: ['http://environmentvariables.org/SystemRoot']
+urls:
+- 'http://environmentvariables.org/SystemRoot'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableTemp
 doc: The %TEMP% environment variable.
@@ -583,7 +629,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'TEMP'}
 provides: [environ_temp]
 supported_os: [Windows]
-urls: ['http://environmentvariables.org/Temp']
+urls:
+- 'http://environmentvariables.org/Temp'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEnvironmentVariableWinDir
 doc: The %WinDir% environment variable.
@@ -602,7 +650,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'windir'}
 provides: [environ_windir]
 supported_os: [Windows]
-urls: ['http://environmentvariables.org/WinDir']
+urls:
+- 'http://environmentvariables.org/WinDir'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsEventLogs
 doc: Windows Event logs.
@@ -629,7 +679,9 @@ sources:
 conditions: [os_major_version < 6]
 labels: [Logs]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_Event_Log_(EVT)']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows_Event_Log_(EVT)'
+- 'https://attack.mitre.org/techniques/T1137/'
 ---
 name: WindowsEventLogSecurity
 doc: Security Windows Event Log.
@@ -641,7 +693,10 @@ sources:
 conditions: [os_major_version < 6]
 labels: [Logs]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_Event_Log_(EVT)']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows_Event_Log_(EVT)'
+- 'https://attack.mitre.org/techniques/T1078/'
+- 'https://attack.mitre.org/techniques/T1098/'
 ---
 name: WindowsEventLogSystem
 doc: System Windows Event Log.
@@ -1542,7 +1597,9 @@ sources:
       - '%%environ_systemroot%%\SysWow64\Tasks\**10'
     separator: '\'
 supported_os: [Windows]
-urls: ['http://forensicswiki.org/wiki/Windows#Scheduled_Tasks']
+urls:
+- 'http://forensicswiki.org/wiki/Windows#Scheduled_Tasks'
+- 'https://attack.mitre.org/techniques/T1053/'
 ---
 name: WindowsScreenSaverExecutable
 doc: ScreenSaver Executable
