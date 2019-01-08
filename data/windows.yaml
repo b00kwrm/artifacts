@@ -840,6 +840,7 @@ urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/cc144171(v=vs.85).aspx'
 - 'http://www.windowrdb.com/w.php?w=hklm-software-microsoft-windows-currentversion-explorer-commandstore-shell-windows-closewindow'
 - 'http://www.checkfilename.com/view-details/Windows-7-Ultimate/RespageIndex/4/sTab/2/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsExplorerNamespaceCommonPlaces
 doc: CLSIDs listed here are used to populate the Common Places items.
@@ -864,6 +865,7 @@ urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/hh127450(v=vs.85).aspx'
 - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/commonplacesfolder.htm'
 - 'http://www.windowrdb.com/w.php?w=hklm-software-microsoft-windows-currentversion-explorer-commonplaces'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsExplorerNamespaceControlPanel
 doc: CLSIDs listed here are used to populate the Control Panel items.
@@ -895,6 +897,7 @@ supported_os: [Windows]
 urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/hh127450(v=vs.85).aspx'
 - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/controlpanel.htm'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsExplorerNamespaceDesktop
 doc: CLSIDs listed here are used to populate the Desktop items.
@@ -920,6 +923,7 @@ urls:
 - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/regfolder.htm'
 - 'http://www.geoffchappell.com/notes/windows/shell/controlpanel/desktopicons.htm'
 - 'https://support.microsoft.com/en-us/kb/321777'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsExplorerNamespaceMyComputer
 doc: CLSIDs listed here are used to populate the MyComputer items.
@@ -944,6 +948,7 @@ urls:
 - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/mycomputer.htm'
 - 'http://www.howtogeek.com/168081/how-to-remove-the-folders-from-my-computer-in-windows-8.1/'
 - 'http://answers.microsoft.com/en-us/windows/forum/windows8_1-files/how-to-remove-these-folders-from-windows-81/777c4ba3-7853-453e-bfa0-9a0f4245b9e1?db=5'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsExplorerNamespaceNetworkNeighborhood
 doc: CLSIDs listed here are used to populate the Network Neighborhood items.
@@ -968,6 +973,8 @@ urls:
 - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/regfolder.htm'
 - 'http://www.lavasoft.com/mylavasoft/rogues/secretservice'
 - 'http://www.wikihow.com/Manually-Remove-Macatte-Malware'
+- 'https://attack.mitre.org/tactics/TA0003/'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsExplorerNamespacePrintersAndFaxes
 doc: CLSIDs listed here are used to populate the Printer and Fax items.
@@ -990,6 +997,7 @@ sources:
 supported_os: [Windows]
 urls:
 - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/printers.htm'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsFileTypeAutorunAssociations
 doc: |
@@ -1005,7 +1013,10 @@ sources:
       - 'HKEY_USERS\%%users.sid%%\Software\Classes\.*'
       - 'HKEY_USERS\%%users.sid%%\Software\Classes\Wow6432Node\.*'
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/ms678415(v=vs.85).aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms678415(v=vs.85).aspx'
+- 'https://attack.mitre.org/tactics/TA0007/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsFirewallLogFile
 doc: Windows Firewall default logfile
@@ -1016,7 +1027,13 @@ sources:
     separator: '\'
 labels: [System]
 supported_os: [Windows]
-urls: ['https://docs.microsoft.com/en-us/windows/access-protection/windows-firewall/configure-the-windows-firewall-log']
+urls:
+- 'https://docs.microsoft.com/en-us/windows/access-protection/windows-firewall/configure-the-windows-firewall-log'
+- 'https://attack.mitre.org/techniques/T1043/'
+- 'https://attack.mitre.org/techniques/T1071/'
+- 'https://attack.mitre.org/techniques/T1032/'
+- 'https://attack.mitre.org/techniques/T1095/'
+- 'https://attack.mitre.org/techniques/T1065/'
 ---
 name: WindowsFirewallEnabledRules
 doc: Command to list the enabled Windows Firewall rules.
@@ -1027,6 +1044,12 @@ sources:
     cmd: netsh.exe
 labels: [System]
 supported_os: [Windows]
+urls:
+- 'https://attack.mitre.org/techniques/T1043/'
+- 'https://attack.mitre.org/techniques/T1071/'
+- 'https://attack.mitre.org/techniques/T1032/'
+- 'https://attack.mitre.org/techniques/T1095/'
+- 'https://attack.mitre.org/techniques/T1065/'
 ---
 name: WindowsFirewallRules
 doc: Command to list the configured Windows Firewall rules.
@@ -1037,6 +1060,12 @@ sources:
     cmd: netsh.exe
 labels: [System]
 supported_os: [Windows]
+urls:
+- 'https://attack.mitre.org/techniques/T1043/'
+- 'https://attack.mitre.org/techniques/T1071/'
+- 'https://attack.mitre.org/techniques/T1032/'
+- 'https://attack.mitre.org/techniques/T1095/'
+- 'https://attack.mitre.org/techniques/T1065/'
 ---
 name: WindowsGroupPolicyScripts
 doc: Windows group policy scripts
@@ -1047,6 +1076,7 @@ sources:
       - '%%environ_systemroot%%\GroupPolicy\User\Scripts\scripts.ini'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1082/']
 ---
 name: WindowsHostsFiles
 doc: The Windows hosts and lmhosts file.
@@ -1058,6 +1088,7 @@ sources:
       - '%%environ_systemroot%%\System32\Drivers\etc\hosts'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/tactics/TA0005/']
 ---
 name: WindowsHotkeyReplacement
 doc: Hotkey executable replacement.
@@ -1070,6 +1101,7 @@ sources:
       - '%%environ_systemroot%%\System32\utilman.exe'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1015/']
 ---
 name: WindowsInstallationDateTime
 doc: Windows installation date and time
@@ -1079,6 +1111,7 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'InstallDate'}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1012/']
 ---
 name: WindowsLogoffScript
 doc: Windows policy logoff script
@@ -1089,7 +1122,9 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Policies\Microsoft\Windows\System\Scripts', value: 'Logoff'}
       - {key: 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\System\Scripts', value: 'Logoff'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/ff404236.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/ff404236.aspx'
+- 'https://attack.mitre.org/techniques/T1037/'
 ---
 name: WindowsLogonScript
 doc: Windows policy logon script
@@ -1100,7 +1135,9 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Policies\Microsoft\Windows\System\Scripts', value: 'Logon'}
       - {key: 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\System\Scripts', value: 'Logon'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/ff404236.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/ff404236.aspx'
+- 'https://attack.mitre.org/techniques/T1037/'
 ---
 name: WindowsLSAAuthenticationPackages
 doc: Authentication Packages can be injected into LSASS.
@@ -1114,6 +1151,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://technet.microsoft.com/en-us/library/cc963218.aspx'
+- 'https://attack.mitre.org/techniques/T1131/'
 ---
 name: WindowsLSANotificationPackages
 doc: Notification Packages can be injected into LSASS.
@@ -1127,6 +1165,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://technet.microsoft.com/en-us/library/cc963221.aspx'
+- 'https://attack.mitre.org/techniques/T1131/'
 ---
 name: WindowsLSASecurityPackages
 doc: Security Packages can be injected into LSASS.
@@ -1140,6 +1179,7 @@ supported_os: [Windows]
 urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/aa379392(v=vs.85).aspx'
 - 'https://dl.mandiant.com/EE/library/MIRcon2014/MIRcon_2014_IR_Track_Analysis_of_Malicious_SSP.pdf'
+- 'https://attack.mitre.org/techniques/T1131/'
 ---
 name: WindowsMetroApplicationCache
 doc: Windows Metro application cache.
