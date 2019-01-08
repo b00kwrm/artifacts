@@ -1929,6 +1929,7 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders', value: 'Common Startup'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders', value: 'Startup'}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1060/']
 ---
 name: WindowsStartupFolders
 doc: Windows startup folder persistence.
@@ -1942,6 +1943,7 @@ sources:
       - '%%environ_allusersprofile%%\Microsoft\Windows\Start Menu\Programs\Startup\*'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1060/']
 ---
 name: WindowsStartupScript
 doc: Windows policy startup script
@@ -2420,6 +2422,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://en.wikipedia.org/wiki/Layered_Service_Provider'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WinSock2NamespaceProviders
 doc: WinSock2NamespaceProviders
@@ -2433,6 +2436,7 @@ urls:
 - 'https://www.symantec.com/security_response/writeup.jsp?docid=2012-020609-4221-99&tabid=2'
 - 'http://www.nirsoft.net/utils/winsock_service_providers.html'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms739923(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsDNSSettings
 doc: Windows Registry Keys that contain DNS and DHCP settings.
@@ -2447,4 +2451,6 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Tcpip\Parameters\Interfaces\*', value: 'DhcpServer'}
 labels: [System, Network]
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/dd197418(v=ws.10).aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/dd197418(v=ws.10).aspx'
+- 'https://attack.mitre.org/techniques/T1012/'
