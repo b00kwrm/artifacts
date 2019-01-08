@@ -708,7 +708,9 @@ sources:
 conditions: [os_major_version < 6]
 labels: [Logs]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_Event_Log_(EVT)']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows_Event_Log_(EVT)'
+- 'https://attack.mitre.org/techniques/T1050/'
 ---
 name: WindowsXMLEventLogApplication
 doc: Application Windows XML Event Log.
@@ -720,7 +722,9 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Logs]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)'
+- 'https://attack.mitre.org/techniques/T1050/'
 ---
 name: WindowsXMLEventLogSecurity
 doc: Security Windows XML Event Log.
@@ -732,7 +736,10 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Logs]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)'
+- 'https://attack.mitre.org/techniques/T1078/'
+- 'https://attack.mitre.org/techniques/T1098/'
 ---
 name: WindowsXMLEventLogSysmon
 doc: Sysmon Windows XML Event Log.
@@ -746,6 +753,11 @@ supported_os: [Windows]
 urls:
 - 'https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon'
 - 'https://blogs.technet.microsoft.com/motiba/2016/10/18/sysinternals-sysmon-unleashed'
+- 'https://attack.mitre.org/techniques/T1055/'
+- 'https://attack.mitre.org/techniques/T1202/'
+- 'https://attack.mitre.org/techniques/T1191/'
+- 'https://attack.mitre.org/techniques/T1027/'
+- 'https://attack.mitre.org/techniques/T1198/'
 ---
 name: WindowsXMLEventLogSystem
 doc: System Windows XML Event Log.
@@ -757,7 +769,9 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Logs]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)'
+- 'https://attack.mitre.org/techniques/T1198/'
 ---
 name: WindowsXMLEventLogTerminalServices
 doc: TerminalServices Windows XML Event Log.
@@ -769,7 +783,9 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Logs]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)'
+- 'https://attack.mitre.org/techniques/T1076/'
 ---
 name: WindowsExcludeFromKnownDLLs
 doc: ExcludeFromKnownDLLs can be used to bypass search order hijacking protection.
@@ -778,7 +794,9 @@ sources:
   attributes:
     key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager', value: 'ExcludeFromKnownDLLs'}]
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/ms682586%28v=vs.85%29.aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms682586%28v=vs.85%29.aspx'
+- 'https://attack.mitre.org/techniques/T1076/'
 ---
 name: WindowsExplorerAppKey
 doc: Handlers for special keys on some keyboards (file path or CLSID).
@@ -791,6 +809,8 @@ supported_os: [Windows]
 urls:
 - 'http://answers.microsoft.com/en-us/windows/forum/windows_vista-hardware/assigning-the-special-keys-at-the-top-of-the/d1ab2e13-5297-457d-a8e8-bc2c883d8b58?db=5'
 - 'http://h30434.www3.hp.com/t5/Notebook-Hardware/How-do-I-customize-the-Action-Keys/td-p/379207'
+- 'https://attack.mitre.org/tactics/TA0002/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsExplorerAutoplayHandlers
 doc: Handlers for autoplay events in Windows Explorer.
@@ -802,6 +822,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/aa468474.aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsExplorerContextMenuHandlers
 doc: Handlers for subcommands on context menu
