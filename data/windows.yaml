@@ -1258,6 +1258,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://support.microsoft.com/en-us/kb/126054'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsNetworkShellHelpers
 doc: Windows Network Shell (netsh) helpers are loaded on boot
@@ -1268,7 +1269,10 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Netsh'
       - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Netsh'
 supported_os: [Windows]
-urls: ['https://support.microsoft.com/en-us/kb/242468']
+urls:
+- 'https://support.microsoft.com/en-us/kb/242468'
+- 'https://attack.mitre.org/tactics/TA0003/'
+- 'https://attack.mitre.org/techniques/T1128/'
 ---
 name: WindowsOpenSaveMRU
 doc: Information about files opened or saved in a Windows shell dialog.
@@ -1281,6 +1285,8 @@ supported_os: [Windows]
 urls:
  - 'http://www.forensicswiki.org/wiki/OpenSaveMRU'
  - 'https://digital-forensics.sans.org/blog/2010/04/02/openrunsavemru-lastvisitedmru'
+ - 'https://attack.mitre.org/tactics/TA0007/'
+ - 'https://attack.mitre.org/tactics/TA0009/'
 ---
 name: WindowsOpenSavePidlMRU
 doc: Information about files opened or saved in a Windows shell dialog.
@@ -1293,6 +1299,8 @@ supported_os: [Windows]
 urls:
  - 'https://digital-forensics.sans.org/blog/2010/04/02/openrunsavemru-lastvisitedmru'
  - 'http://www.forensicswiki.org/wiki/OpenSavePidlMRU'
+ - 'https://attack.mitre.org/tactics/TA0007/'
+ - 'https://attack.mitre.org/tactics/TA0009/'
 ---
 name: WindowsPendingFileRenames
 doc: Windows Pending file renames on reboot
