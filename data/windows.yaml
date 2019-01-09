@@ -1189,6 +1189,7 @@ sources:
 supported_os: [Windows]
 urls:
 - 'http://www.forensicmag.com/article/2012/09/microsoft-windows-8-forensic-first-look'
+- 'https://attack.mitre.org/tactics/TA0011/'
 ---
 name: WindowsMetroApplicationCookies
 doc: Windows Metro application cookies.
@@ -1198,6 +1199,7 @@ sources:
 supported_os: [Windows]
 urls:
 - 'http://www.forensicmag.com/article/2012/09/microsoft-windows-8-forensic-first-look'
+- 'https://attack.mitre.org/tactics/TA0011/'
 ---
 name: WindowsMetroApplicationHistory
 doc: Windows Metro application history.
@@ -1207,6 +1209,7 @@ sources:
 supported_os: [Windows]
 urls:
 - 'http://www.forensicmag.com/article/2012/09/microsoft-windows-8-forensic-first-look'
+- 'https://attack.mitre.org/tactics/TA0011/'
 ---
 name: WindowsMetroUserPinnedFavoriteTiles
 doc: Windows Metro user-pinned favorite tiles.
@@ -1216,6 +1219,7 @@ sources:
 supported_os: [Windows]
 urls:
 - 'http://www.forensicmag.com/article/2012/09/microsoft-windows-8-forensic-first-look'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsMostRecentApplication
 doc: Windows Most Recent Application name key
@@ -1229,6 +1233,7 @@ supported_os: [Windows]
 urls:
 - 'http://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/troj_ransom.smc7'
 - 'https://www.symantec.com/security_response/writeup.jsp?docid=2014-092314-3644-99&tabid=2'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsMSDTCDLLs
 doc: Windows MSDTC attempts to load these DLLs on start
@@ -1239,7 +1244,9 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Microsoft\MSDTC\MTxOCI\*'
       - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\MSDTC\MTxOCI\*'
 supported_os: [Windows]
-urls: ['https://www.mandiant.com/blog/hikit-rootkit-advanced-persistent-attack-techniques-part-1-2/']
+urls:
+- 'https://www.mandiant.com/blog/hikit-rootkit-advanced-persistent-attack-techniques-part-1-2/'
+- 'https://attack.mitre.org/techniques/T1038/'
 ---
 name: WindowsMultiMediaDrivers
 doc: Configured drivers for different multimedia filetypes.
