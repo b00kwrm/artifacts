@@ -1310,7 +1310,9 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager', value: 'PendingFileRenameOperations'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc960241.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/cc960241.aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsPersistenceMechanisms
 doc: Persistence mechanisms in Windows.
@@ -1397,7 +1399,9 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Authentication\PLAP Providers\*'
       - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Authentication\PLAP Providers\*'
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/bb530584(v=vs.85).aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb530584(v=vs.85).aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsPolicyDisallowRun
 doc: Restrict users from running specific applications, typically used by malware to block AV.
@@ -1407,7 +1411,9 @@ sources:
     keys: ['HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun\*']
 labels: [Software]
 supported_os: [Windows]
-urls: ['https://support.microsoft.com/en-us/kb/323525']
+urls:
+- 'https://support.microsoft.com/en-us/kb/323525'
+- 'https://attack.mitre.org/tactics/TA0005/'
 ---
 name: WindowsPowerShellDefaultProfiles
 doc: Default PowerShell Profile files. These files are executed by default when PowerShell starts up.
@@ -1436,6 +1442,8 @@ supported_os: [Windows]
 urls:
 - 'https://technet.microsoft.com/library/hh847748.aspx'
 - 'http://www.hexacorn.com/blog/2014/08/27/beyond-good-ol-run-key-part-16/'
+- 'https://attack.mitre.org/tactics/TA0003/'
+- 'https://attack.mitre.org/techniques/T1086/'
 ---
 name: WindowsPowerShellExecutionPolicies
 doc: PowerShell Script Execution Policies for all users, and the system.
@@ -1449,6 +1457,8 @@ supported_os: [Windows]
 urls:
 - 'https://technet.microsoft.com/library/hh847748.aspx'
 - 'http://www.hexacorn.com/blog/2014/08/27/beyond-good-ol-run-key-part-16/'
+- 'https://attack.mitre.org/tactics/TA0003/'
+- 'https://attack.mitre.org/techniques/T1086/'
 ---
 name: WindowsPrefetchFiles
 doc: Windows Prefetch files.
@@ -1459,7 +1469,9 @@ sources:
     separator: '\'
 labels: [System]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Prefetch']
+urls:
+- 'http://www.forensicswiki.org/wiki/Prefetch'
+- 'https://attack.mitre.org/tactics/TA0002/'
 ---
 name: WindowsPrintMonitors
 doc: Windows Print Monitor DLL config.
@@ -1471,6 +1483,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://support.microsoft.com/en-us/kb/102966'
+- 'https://attack.mitre.org/techniques/T1013/'
 ---
 name: WindowsProductName
 doc: The Windows product name
@@ -1478,7 +1491,9 @@ sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'ProductName'}]}
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc']
+urls:
+- 'https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsProgramsCache
 doc: Windows Programs Cache
