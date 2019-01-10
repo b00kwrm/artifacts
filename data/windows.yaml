@@ -1429,6 +1429,7 @@ supported_os: [Windows]
 urls:
 - 'https://technet.microsoft.com/en-us/magazine/2008.10.windowspowershell.aspx#id0190010'
 - 'http://www.hexacorn.com/blog/2014/08/27/beyond-good-ol-run-key-part-16/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsPowerShellEnableScripts
 doc: Registry keys that control whether PowerShell scripts can execute directly.
@@ -1504,7 +1505,9 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage', value: 'ProgramsCache'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage2', value: 'ProgramsCache'}
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/Programs%20Cache%20values.asciidoc']
+urls:
+- 'https://github.com/libyal/winreg-kb/blob/master/documentation/Programs%20Cache%20values.asciidoc'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsProxyPACAutoConfigURL
 doc: Windows Proxy PAC AutoConfigURL.
@@ -1515,7 +1518,9 @@ sources:
         - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'AutoConfigURL'}
 labels: [System, Network]
 supported_os: [Windows]
-urls: ['https://blogs.msdn.microsoft.com/askie/2015/07/17/how-can-i-configure-proxy-autoconfigurl-setting-using-group-policy-preference-gpp/']
+urls:
+- 'https://blogs.msdn.microsoft.com/askie/2015/07/17/how-can-i-configure-proxy-autoconfigurl-setting-using-group-policy-preference-gpp/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsRecentFileCacheBCF
 doc: The RecentFileCache.bcf file.
@@ -1526,7 +1531,10 @@ sources:
     separator: '\'
 conditions: [os_major_version >= 6 AND os_minor_version >= 1]
 supported_os: [Windows]
-urls: ['https://github.com/libyal/assorted/blob/master/documentation/RecentFileCache.bcf%20format.asciidoc']
+urls:
+- 'https://github.com/libyal/assorted/blob/master/documentation/RecentFileCache.bcf%20format.asciidoc'
+- 'https://attack.mitre.org/tactics/TA0007/'
+- 'https://attack.mitre.org/tactics/TA0009/'
 ---
 name: WindowsRecycleBin
 doc: Windows Recycle Bin (Recyler, $Recycle.Bin) files.
@@ -1539,7 +1547,9 @@ sources:
     separator: '\'
 labels: [Users]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows#Recycle_Bin']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows#Recycle_Bin'
+- 'https://attack.mitre.org/tactics/TA0005/' 
 ---
 name: WindowsRegistryCurrentControlSet
 doc: The current control set of the Windows Registry.
@@ -1548,7 +1558,9 @@ sources:
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\Select', value: 'Current'}]}
 provides: [current_control_set]
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/wiki/System-keys']
+urls:
+- 'https://github.com/libyal/winreg-kb/wiki/System-keys'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsRegistryFilesAndTransactionLogs
 doc: Windows user and system Registry files and transaction logs.
@@ -1562,6 +1574,9 @@ sources:
       - 'WindowsUserRegistryTransactionLogFiles'
 labels: [System,Users]
 supported_os: [Windows]
+urls:
+- 'https://attack.mitre.org/techniques/T1012/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsRegistryProfiles
 doc: |
@@ -1575,7 +1590,9 @@ sources:
 labels: [Users]
 provides: [users.sid, users.userprofile, users.homedir, users.username]
 supported_os: [Windows]
-urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx']
+urls:
+- 'http://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsReleaseIdentifier
 doc: |
@@ -1586,7 +1603,9 @@ sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'ReleaseID'}]}
 supported_os: [Windows]
-urls: ['https://www.microsoft.com/en-us/itpro/windows-10/release-information']
+urls:
+- 'https://www.microsoft.com/en-us/itpro/windows-10/release-information'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsRoverAutostartDLL
 doc: |
@@ -1599,7 +1618,9 @@ sources:
 - type: FILE
   attributes: {paths: ['%%environ_systemroot%%\System32\rover.dll']}
 supported_os: [Windows]
-urls: ['http://www.hexacorn.com/blog/2014/05/21/beyond-good-ol-run-key-part-12/']
+urls:
+- 'http://www.hexacorn.com/blog/2014/05/21/beyond-good-ol-run-key-part-12/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsRoverAutostartKey
 doc: |
@@ -1610,7 +1631,9 @@ sources:
 - type: REGISTRY_KEY
   attributes: {keys: ['HKEY_CLASSES_ROOT\CLSID\{16d12736-7a9e-4765-bec6-f301d679caaa}']}
 supported_os: [Windows]
-urls: ['http://www.hexacorn.com/blog/2014/05/21/beyond-good-ol-run-key-part-12/']
+urls:
+- 'http://www.hexacorn.com/blog/2014/05/21/beyond-good-ol-run-key-part-12/'
+- https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsRunGrpConv
 doc: |
@@ -1625,6 +1648,7 @@ conditions: [os_major_version <= 5]
 urls:
 - 'http://www.hexacorn.com/blog/2014/06/18/beyond-good-ol-run-key-part-13/'
 - 'http://www.exploit-id.com/local-exploits/windows-xp-sp2-grpconv-exe'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsRunKeys
 doc: |
@@ -1663,6 +1687,7 @@ urls:
 - 'https://support.microsoft.com/en-us/kb/137367'
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://technet.microsoft.com/en-us/magazine/ee851671.aspx'
+- 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WindowsRunServices
 doc: Windows Run Services.
@@ -1675,7 +1700,9 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServicesOnce\*'
       - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunServices\*'
 supported_os: [Windows]
-urls: ['https://support.microsoft.com/en-us/kb/179365']
+urls:
+- 'https://support.microsoft.com/en-us/kb/179365'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsScheduledTasks
 doc: Windows Scheduled Tasks.
@@ -1705,6 +1732,7 @@ urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://technet.microsoft.com/en-us/library/cc737855(v=ws.10).aspx'
 - 'https://technet.microsoft.com/en-us/library/cc957840.aspx'
+- 'https://attack.mitre.org/techniques/T1180/'
 ---
 name: WindowsSearchDatabase
 doc: Windows Search database (Windows.edb).
