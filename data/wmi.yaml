@@ -19,7 +19,9 @@ sources:
 labels: [Users]
 provides: [users.userdomain]
 supported_os: [Windows]
-urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/aa394507(v=vs.85).aspx']
+urls:
+- 'http://msdn.microsoft.com/en-us/library/windows/desktop/aa394507(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1047/'
 ---
 name: WMIAntivirusProduct
 doc: Enumerate the registered antivirus.
@@ -27,6 +29,9 @@ sources:
 - type: WMI
   attributes: {query: SELECT * FROM AntivirusProduct, base_object: 'winmgmts:\root\SecurityCenter2'}
 supported_os: [Windows]
+urls:
+- 'https://attack.mitre.org/techniques/T1047/'
+- 'https://attack.mitre.org/techniques/T1047/'
 ---
 name: WMIComputerSystemProduct
 doc: Computer System Product including Identifiying number queried from WMI.
@@ -35,7 +40,9 @@ sources:
   attributes: {query: SELECT * FROM Win32_ComputerSystemProduct}
 labels: [System]
 supported_os: [Windows]
-urls: ['http://msdn.microsoft.com/en-us/library/aa394105(v=vs.85).aspx']
+urls:
+- 'http://msdn.microsoft.com/en-us/library/aa394105(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1047/'
 ---
 name: WMIDrivers
 doc: Installed drivers via Windows Management Instrumentation (WMI).
@@ -46,6 +53,7 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Software]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMIEnumerateASEC
 doc: Enumerate instances of ActiveScriptEventConsumer.
@@ -53,6 +61,7 @@ sources:
 - type: WMI
   attributes: {query: SELECT * FROM ActiveScriptEventConsumer, base_object: 'winmgmts:\root\subscription'}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMIEnumerateCLEC
 doc: Enumerate instances of CommandLineEventConsumer.
@@ -60,6 +69,7 @@ sources:
 - type: WMI
   attributes: {query: SELECT * FROM CommandLineEventConsumer, base_object: 'winmgmts:\root\subscription'}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMIHotFixes
 doc: Installed hotfixes via Windows Management Instrumentation (WMI).
@@ -69,6 +79,7 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Software]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMIInstalledSoftware
 doc: Installed software via Windows Management Instrumentation (WMI).
@@ -79,6 +90,7 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Software]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMILastBootupTime
 doc: Last system boot time (UTC) retrieved from WMI.
@@ -87,7 +99,9 @@ sources:
   attributes: {query: SELECT LastBootUpTime FROM Win32_OperatingSystem}
 labels: [System]
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/aa394239(v=vs.85).aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/windows/desktop/aa394239(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1047/'
 ---
 name: WMILogicalDisks
 doc: Disk information via Windows Management Instrumentation (WMI).
@@ -96,7 +110,9 @@ sources:
   attributes: {query: SELECT * FROM Win32_LogicalDisk}
 labels: [System]
 supported_os: [Windows]
-urls: ['http://msdn.microsoft.com/en-us/library/aa394173(v=vs.85).aspx']
+urls:
+- 'http://msdn.microsoft.com/en-us/library/aa394173(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1047/'
 ---
 name: WMILoggedOnSessions
 doc: Logged on users queried from WMI.
@@ -104,6 +120,7 @@ sources:
 - type: WMI
   attributes: {query: SELECT * FROM Win32_LogonSession}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMILoggedOnUsers
 doc: Logged on users queried from WMI.
@@ -111,6 +128,7 @@ sources:
 - type: WMI
   attributes: {query: SELECT * FROM Win32_LoggedonUser}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMILoginUsers
 doc: |
@@ -124,6 +142,7 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Software]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMIPhysicalMemory
 doc: Physical memory information via Windows Management Instrumentation (WMI).
@@ -133,7 +152,9 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [System]
 supported_os: [Windows]
-urls: ["http://msdn.microsoft.com/en-us/library/aa394347%28v=vs.85%29.aspx"]
+urls:
+- "http://msdn.microsoft.com/en-us/library/aa394347%28v=vs.85%29.aspx"
+- 'https://attack.mitre.org/techniques/T1047/'
 ---
 name: WMIProcessList
 doc: Process listing via Windows Management Instrumentation (WMI).
@@ -143,6 +164,7 @@ sources:
 conditions: [os_major_version >= 6]
 labels: [Software]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMIProfileUsersHomeDir
 doc: |
@@ -157,7 +179,9 @@ sources:
 labels: [Users]
 provides: [users.homedir]
 supported_os: [Windows]
-urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/ee886409(v=vs.85).aspx']
+urls:
+- 'http://msdn.microsoft.com/en-us/library/windows/desktop/ee886409(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1047/'
 ---
 name: WMIServices
 doc: Services queried from WMI.
@@ -165,6 +189,7 @@ sources:
 - type: WMI
   attributes: {query: SELECT * FROM Win32_Service}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']
 ---
 name: WMIUsers
 doc: |
@@ -178,7 +203,9 @@ sources:
   attributes: {query: SELECT * FROM Win32_UserAccount}
 labels: [Users]
 supported_os: [Windows]
-urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/aa394507(v=vs.85).aspx']
+urls:
+- 'http://msdn.microsoft.com/en-us/library/windows/desktop/aa394507(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1047/'
 ---
 name: WMIVolumeShadowCopies
 doc: A List of Volume Shadow Copies from WMI.
@@ -187,3 +214,4 @@ sources:
   attributes: {query: SELECT * FROM Win32_ShadowCopy}
 labels: [System]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1047/']

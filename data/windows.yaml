@@ -2369,6 +2369,7 @@ supported_os: [Windows]
 urls:
 - 'http://forensicswiki.org/wiki/Windows_Update'
 - 'http://blogs.msdn.com/b/aruns_blog/archive/2011/06/20/active-setup-registry-key-what-it-is-and-how-to-create-in-the-package-using-admin-studio-install-shield.aspx'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsUserDownloadsDirectory
 doc: User downloads directory
@@ -2379,6 +2380,7 @@ sources:
     separator: '\'
 labels: [Users]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1192/']
 ---
 name: WindowsUserRecentFiles
 doc: Windows user specific recent files.
@@ -2407,7 +2409,9 @@ sources:
     separator: '\'
 labels: [Users]
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/wiki/Registry-files']
+urls:
+- 'https://github.com/libyal/winreg-kb/wiki/Registry-files'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsUserRegistryTransactionLogFiles
 doc: Windows user Registry transaction log files.
@@ -2424,7 +2428,9 @@ sources:
     separator: '\'
 labels: [Users]
 supported_os: [Windows]
-urls: ['https://github.com/msuhanov/regf/blob/master/Windows%20registry%20file%20format%20specification.md#format-of-transaction-log-files']
+urls:
+- 'https://github.com/msuhanov/regf/blob/master/Windows%20registry%20file%20format%20specification.md#format-of-transaction-log-files'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsUserRegistryFilesAndTransactionLogs
 doc: Windows user Registry files and transaction logs.
@@ -2436,6 +2442,7 @@ sources:
       - 'WindowsUserRegistryTransactionLogFiles'
 labels: [Users]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1012/']
 ---
 name: WindowsUserShellFolders
 doc: The Shell Folders information for Windows users.
@@ -2460,6 +2467,7 @@ provides:
 - users.userprofile
 - users.temp
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1012/']
 ---
 name: WindowsWinlogonGinaDLL
 doc: Windows Gina DLL replacement.
@@ -2470,7 +2478,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'GinaDLL'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'GinaDLL'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc939701.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/cc939701.aspx'
+- 'https://attack.mitre.org/techniques/T1056/'
 ---
 name: WindowsWinlogonNotify
 doc: Windows Winlogon Notify DLL names.
@@ -2481,7 +2491,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify\*', value: 'DLLName'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify\*', value: 'DLLName'}
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/aa379402(v=vs.85).aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/windows/desktop/aa379402(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WindowsWinlogonShell
 doc: Windows shell replacement.
@@ -2492,7 +2504,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'Shell'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'Shell'}
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/ms838576%28v=winembedded.5%29.aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/ms838576%28v=winembedded.5%29.aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsWinlogonSystem
 doc: Applications launched by Winlogon in the system context during the system initialisation.
@@ -2507,6 +2521,7 @@ urls:
 - 'https://code.google.com/p/regripper/wiki/ASEPs'
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'http://regenerus.com/malware-common-loadpoints/'
+- 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WindowsWinlogonTaskman
 doc: Windows Winlogon Taskman replacement.
@@ -2517,7 +2532,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'Taskman'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'Taskman'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc939701.aspx']
+urls:
+ - 'https://technet.microsoft.com/en-us/library/cc939701.aspx'
+ - 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WindowsWinlogonUiHost
 doc: Windows Winlogon UI screen application
@@ -2531,6 +2548,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'http://www.bleepingcomputer.com/forums/t/14028/change-the-loginwelcome-screen/'
+- 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WindowsWinlogonUserinit
 doc: Windows Winlogon Userinit replacement.
@@ -2541,7 +2559,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'Userinit'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'Userinit'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc939862.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/cc939862.aspx'
+- 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WindowsWinlogonVMApplet
 doc: Windows VMApplet replacement.
@@ -2552,7 +2572,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'VMApplet'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'VMApplet'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc939701.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/cc939701.aspx'
+- 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WindowsWinstart
 doc: Windows winstart.bat file
@@ -2564,6 +2586,7 @@ sources:
       - '%%environ_windir%%\dosstart.bat'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1060/']
 ---
 name: WindowsWinlogonAppSetup
 doc: Windows Winlogon Appsetup
@@ -2573,7 +2596,9 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', value: 'AppSetup'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc939701.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/cc939701.aspx'
+- 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WinSock2LayeredServiceProviders
 doc: Used to filter TCP/IP traffic through WinSock2.

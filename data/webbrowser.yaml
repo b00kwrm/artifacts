@@ -137,7 +137,9 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['http://www.forensicswiki.org/wiki/Google_Chrome']
+urls:
+- 'http://www.forensicswiki.org/wiki/Google_Chrome'
+- 'https://attack.mitre.org/techniques/T1189/'
 ---
 name: ChromeExtensionActivity
 doc: Chrome Extension Activity database.
@@ -165,7 +167,9 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['http://forensicswiki.org/wiki/Google_Chrome#Extension_Activity_database']
+urls:
+- 'http://forensicswiki.org/wiki/Google_Chrome#Extension_Activity_database'
+- 'https://attack.mitre.org/techniques/T1176/'
 ---
 name: ChromeExtensions
 doc: Chrome browser extension files.
@@ -194,7 +198,9 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows, Darwin, Linux]
 labels: [Browser]
-urls: ['http://forensicswiki.org/wiki/Google_Chrome#Extensions']
+urls:
+- 'http://forensicswiki.org/wiki/Google_Chrome#Extensions'
+- 'https://attack.mitre.org/techniques/T1176/'
 ---
 name: ChromeExtensionRegistryKeys
 doc: Chrome extensions installed by writing windows registry keys.
@@ -206,7 +212,9 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\**5'
 labels: [Browser]
 supported_os: [Windows]
-urls: ['https://developer.chrome.com/extensions/external_extensions#registry']
+urls:
+- 'https://developer.chrome.com/extensions/external_extensions#registry'
+- 'https://attack.mitre.org/techniques/T1176/'
 ---
 name: ChromePreferences
 doc: Chrome Preferences file.
