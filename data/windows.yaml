@@ -2081,7 +2081,9 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\System\Scripts', value: 'Startup'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/ff404236.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/ff404236.aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsStubPaths
 doc: Windows StubPath persistence.
@@ -2133,7 +2135,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System', value: 'Shell'}
       - {key: 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\System', value: 'Shell'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc728472(v=ws.10).aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/cc728472(v=ws.10).aspx'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsSystemRegistryFilesBackup
 doc: Backup of Windows system Registry files.
@@ -2148,7 +2152,9 @@ sources:
     separator: '\'
 labels: [System]
 supported_os: [Windows]
-urls: ['https://github.com/msuhanov/regf/blob/master/Windows%20registry%20file%20format%20specification.md#types-of-files']
+urls:
+- 'https://github.com/msuhanov/regf/blob/master/Windows%20registry%20file%20format%20specification.md#types-of-files'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsSystemRegistryTransactionLogFilesBackup
 doc: |
@@ -2174,7 +2180,9 @@ sources:
     separator: '\'
 labels: [System]
 supported_os: [Windows]
-urls: ['https://github.com/msuhanov/regf/blob/master/Windows%20registry%20file%20format%20specification.md#types-of-files']
+urls:
+- 'https://github.com/msuhanov/regf/blob/master/Windows%20registry%20file%20format%20specification.md#types-of-files'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsSystemRegistryFiles
 doc: Windows system Registry files.
@@ -2190,7 +2198,9 @@ sources:
     separator: '\'
 labels: [System]
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/wiki/Registry-files']
+urls:
+- 'https://github.com/libyal/winreg-kb/wiki/Registry-files'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsSystemRegistryTransactionLogFiles
 doc: Windows system Registry transaction log files.
@@ -2213,7 +2223,9 @@ sources:
     separator: '\'
 labels: [System]
 supported_os: [Windows]
-urls: ['https://github.com/msuhanov/regf/blob/master/Windows%20registry%20file%20format%20specification.md#format-of-transaction-log-files']
+urls:
+- 'https://github.com/msuhanov/regf/blob/master/Windows%20registry%20file%20format%20specification.md#format-of-transaction-log-files'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsSystemRegistryFilesAndTransactionLogs
 doc: Windows system Registry files and transaction logs.
@@ -2225,6 +2237,7 @@ sources:
       - 'WindowsSystemRegistryTransactionLogFiles'
 labels: [System]
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1012/']
 ---
 name: WindowsSystemResourceUsageMonitorDatabaseFile
 doc: Windows System Resource Usage Monitor (SRUM) database file.
@@ -2234,7 +2247,9 @@ sources:
     paths: ['%%environ_systemroot%%\System32\sru\SRUDB.dat']
     separator: '\'
 supported_os: [Windows]
-urls: ['https://github.com/libyal/esedb-kb/blob/master/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc']
+urls:
+- 'https://github.com/libyal/esedb-kb/blob/master/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsTempDirectories
 doc: Contents of the Windows temporary directories
@@ -2247,6 +2262,7 @@ sources:
     - '%%users.localappdata%%\Temp\*'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1012/']
 ---
 name: WindowsTerminalServerRunKeys
 doc: Windows Terminal Server Run keys
@@ -2267,7 +2283,9 @@ sources:
       - 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\Software\Microsoft\Windows\CurrentVersion\RunonceEx\*'
       - 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\Software\Microsoft\Windows\CurrentVersion\Run\*'
 supported_os: [Windows]
-urls: ['http://gladiator-antivirus.com/forum/index.php?showtopic=24610']
+urls:
+- 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsTerminalServerStartupPrograms
 doc: Windows Terminal Server Startup Programs
@@ -2277,7 +2295,9 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\Wds\rdpwd', value: 'StartupPrograms'}
 supported_os: [Windows]
-urls: ['http://forum.sysinternals.com/rdpclip_topic4729.html']
+urls:
+- 'http://forum.sysinternals.com/rdpclip_topic4729.html'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsTimezone
 doc: The timezone of the system in Olson format.
@@ -2286,7 +2306,9 @@ sources:
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation', value: 'StandardName'}]}
 provides: [time_zone]
 supported_os: [Windows]
-urls: ['https://github.com/libyal/winreg-kb/wiki/Time-zone-keys']
+urls:
+- 'https://github.com/libyal/winreg-kb/wiki/Time-zone-keys'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsToolPaths
 doc: Paths to windows tools such as defrag, chkdsk.
@@ -2302,6 +2324,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11118/'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsUninstallKeys
 doc: Uninstall Registry keys
@@ -2312,7 +2335,9 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
       - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\Userdata\%%users.sid%%\Products\*\InstallProperties'
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/aa372105(v=vs.85).aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/aa372105(v=vs.85).aspx'
+- 'https://attack.mitre.org/techniques/T1012/'
 ---
 name: WindowsUpdateBuildRevision
 doc: |
@@ -2323,7 +2348,10 @@ sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'UBR'}]}
 supported_os: [Windows]
-urls: ['https://social.technet.microsoft.com/Forums/en-US/cadee4de-24d0-403e-9f3e-75868abf8f34']
+urls:
+- 'https://social.technet.microsoft.com/Forums/en-US/cadee4de-24d0-403e-9f3e-75868abf8f34'
+- 'https://attack.mitre.org/techniques/T1012/'
+- 'https://attack.mitre.org/techniques/T1082/'
 ---
 name: WindowsUpdateStatus
 doc: Windows auto update status.
