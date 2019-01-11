@@ -1743,7 +1743,9 @@ sources:
     separator: '\'
 labels: [Software]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_Desktop_Search']
+urls:
+- 'http://www.forensicswiki.org/wiki/Windows_Desktop_Search'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: WindowsSecurityProviders
 doc: Security Providers DLLs
@@ -1755,6 +1757,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://github.com/wmark/security-configuration/blob/master/Windows/disable-weak-ciphers-and-enable-TLS1.x.reg'
+- 'https://attack.mitre.org/techniques/T1101/'
 ---
 name: WindowsServiceControlManagerExtension
 doc: Windows service control manager extension
@@ -1769,6 +1772,7 @@ urls:
 - 'https://support.microsoft.com/en-us/kb/102985'
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'http://www.silentrunners.org/Silent%20Runners.vbs'
+- 'https://attack.mitre.org/techniques/T1035/'
 ---
 name: WindowsServices
 doc: Windows services from the Registry.
@@ -1783,6 +1787,7 @@ supported_os: [Windows]
 urls:
 - 'http://support.microsoft.com/kb/103000'
 - 'https://github.com/libyal/winreg-kb/wiki/System-keys'
+- 'https://attack.mitre.org/techniques/T1035/'
 ---
 name: WindowsSessionManagerBootExecute
 doc: Windows Session Manager BootExecute persistence.
@@ -1791,7 +1796,9 @@ sources:
   attributes:
     key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager', value: 'BootExecute'}]
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc963230.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/cc963230.aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsSessionManagerExecute
 doc: Windows Session Manager Execute persistence
@@ -1800,7 +1807,9 @@ sources:
   attributes:
     key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager', value: 'Execute'}]
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/cc976130.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/cc976130.aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsSessionManagerSetupExecute
 doc: Windows Session Manager SetupExecute persistence
@@ -1809,7 +1818,9 @@ sources:
   attributes:
     key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager', value: 'SetupExecute'}]
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/dd392286%28v=vs.85%29.aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/windows/desktop/dd392286%28v=vs.85%29.aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsSessionManagerSubSystems
 doc: Windows Session Manager SubSystems persistence
@@ -1821,6 +1832,7 @@ supported_os: [Windows]
 urls:
 - 'https://technet.microsoft.com/en-us/library/cc976130.aspx'
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsSessionManagerWOWCommandLine
 doc: Windows Session Manager Windows-on-Windows (WOW) command line
@@ -1831,7 +1843,9 @@ sources:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\WOW', value: 'cmdline'}
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\WOW', value: 'wowcmdline'}
 supported_os: [Windows]
-urls: ['https://support.microsoft.com/en-us/kb/102986']
+urls:
+- 'https://support.microsoft.com/en-us/kb/102986'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsSharedTaskScheduler
 doc: Runs on windows boot.
@@ -1845,6 +1859,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'http://www.bleepingcomputer.com/tutorials/windows-program-automatic-startup-locations/'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsShellExecuteHooks
 doc: Shell execution hooks are called when ShellExecuteEx() is called.
@@ -1859,6 +1874,7 @@ urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'http://regenerus.com/malware-common-loadpoints/'
 - 'https://code.google.com/p/regripper/wiki/ASEPs'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsShellExtensions
 doc: Approved extensions to the Windows Shell (explorer.exe).
@@ -1871,7 +1887,9 @@ sources:
       - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved'
       - 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved'
 supported_os: [Windows]
-urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/cc144110(v=vs.85).aspx']
+urls:
+- 'https://msdn.microsoft.com/en-us/library/windows/desktop/cc144110(v=vs.85).aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsShellHandlersRegistryKeys
 doc: |
@@ -1925,6 +1943,7 @@ urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'http://www.codeguru.com/cpp/com-tech/shell/article.php/c4515/Logging-the-Shell-Activity.htm'
 - 'http://www.trendmicro.com/vinfo/us/threat-encyclopedia/archive/malware/troj_qoolaid.r'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsShellIconOverlayIdentifiers
 doc: Called to display custom icons.
@@ -1940,6 +1959,7 @@ supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/hh127455(v=vs.85).aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsShellLoadAndRun
 doc: Windows Shell Load and Run values
@@ -1952,7 +1972,9 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows', value: 'Load'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows', value: 'Run'}
 supported_os: [Windows]
-urls: ['https://support.microsoft.com/en-us/kb/103865']
+urls:
+- 'https://support.microsoft.com/en-us/kb/103865'
+- 'https://attack.mitre.org/techniques/T1060/'
 ---
 name: WindowsShellOpenCommand
 doc: Executed every time this file type is opened, should be "%1 %*".
@@ -1963,7 +1985,9 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Classes\*\shell\open\command'
       - 'HKEY_LOCAL_MACHINE\Software\Classes\Wow6432Node\*\shell\open\command'
 supported_os: [Windows]
-urls: ['http://gladiator-antivirus.com/forum/index.php?showtopic=24610']
+urls:
+- 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsShellServiceObjects
 doc: Windows Shell (explorer.exe) service objects delayed load.
@@ -1974,7 +1998,9 @@ sources:
       - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\ShellServiceObjectDelayLoad'
       - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\ShellServiceObjectDelayLoad'
 supported_os: [Windows]
-urls: ['http://www.microsoft.com/security/portal/threat/encyclopedia/Entry.aspx?Name=TrojanClicker:Win32/Zirit.X#tab=2']
+urls:
+- 'http://www.microsoft.com/security/portal/threat/encyclopedia/Entry.aspx?Name=TrojanClicker:Win32/Zirit.X#tab=2'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsSetupApiLogs
 doc: Windows setup API logs.
@@ -1992,7 +2018,9 @@ sources:
   conditions: [os_major_version >= 6]
 labels: [Logs]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Setup_API_Logs']
+urls:
+- 'http://www.forensicswiki.org/wiki/Setup_API_Logs'
+- 'https://attack.mitre.org/techniques/T1025/'
 ---
 name: WindowsShutdownScript
 doc: Windows policy shutdown script
@@ -2002,7 +2030,9 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\System\Scripts', value: 'Shutdown'}
 supported_os: [Windows]
-urls: ['https://technet.microsoft.com/en-us/library/ff404236.aspx']
+urls:
+- 'https://technet.microsoft.com/en-us/library/ff404236.aspx'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: WindowsStartupFolderModification
 doc: Windows startup folder Registry values.
@@ -2064,6 +2094,7 @@ sources:
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Active Setup\Installed Components\*', value: 'StubPath'}
       - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Active Setup\Installed Components\*', value: 'StubPath'}
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/techniques/T1060/']
 ---
 name: WindowsSuperFetchFiles
 doc: Windows SuperFetch files.
@@ -2076,7 +2107,9 @@ sources:
     separator: '\'
 labels: [System]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/SuperFetch']
+urls:
+- 'http://www.forensicswiki.org/wiki/SuperFetch'
+- 'https://attack.mitre.org/tactics/TA0002/'
 ---
 name: WindowsSystemIniFiles
 doc: Windows system ini files
@@ -2089,6 +2122,7 @@ sources:
       - '%%environ_windir%%\wininit.ini'
     separator: '\'
 supported_os: [Windows]
+urls: ['https://attack.mitre.org/tactics/TA0003/']
 ---
 name: WindowsSystemPolicyShell
 doc: Windows System policy replacement shell (custom user interface).
@@ -2329,6 +2363,9 @@ sources:
     separator: '\'
 labels: [Users]
 supported_os: [Windows]
+urls:
+- 'https://attack.mitre.org/tactics/TA0007/'
+- 'https://attack.mitre.org/tactics/TA0009/'
 ---
 name: WindowsUserRegistryFiles
 doc: Windows user specific Registry files.
