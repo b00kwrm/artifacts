@@ -17,6 +17,7 @@ sources:
       - '/var/spool/anacron/cron.weekly'
 labels: [Configuration Files]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/techniques/T1168/']
 ---
 name: APTSources
 doc: APT package sources list
@@ -28,7 +29,9 @@ sources:
       - '/etc/apt/sources.list.d/*.list'
 labels: [Configuration Files, System]
 supported_os: [Linux]
-urls: ['http://manpages.ubuntu.com/manpages/trusty/en/man5/sources.list.5.html']
+urls:
+- 'http://manpages.ubuntu.com/manpages/trusty/en/man5/sources.list.5.html'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: APTTrustKeys
 doc: APT trusted keys
@@ -42,7 +45,9 @@ sources:
       - '/usr/share/keyrings/*.gpg'
 labels: [Configuration Files, System]
 supported_os: [Linux]
-urls: ['https://wiki.debian.org/SecureApt']
+urls:
+- 'https://wiki.debian.org/SecureApt'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: CronAtAllowDenyFiles
 doc: Files containing users authorised to run cron or at jobs.
@@ -59,6 +64,7 @@ supported_os: [Linux]
 urls:
   - http://manpages.ubuntu.com/manpages/saucy/man5/at.allow.5.html
   - http://manpages.ubuntu.com/manpages/precise/en/man1/crontab.1.html
+  - 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: DebianPackagesLogFiles
 doc: Linux dpkg log files.
@@ -70,6 +76,7 @@ sources:
       - '/var/log/apt/history.log*'
 labels: [Logs]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: DebianPackagesStatus
 doc: Linux dpkg status file.
@@ -78,6 +85,7 @@ sources:
   attributes: {paths: ['/var/lib/dpkg/status']}
 labels: [Software]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: DebianVersion
 doc: Debian version information.
@@ -87,6 +95,7 @@ sources:
 provides: [os_release, os_major_version, os_minor_version]
 labels: [Software]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: DNSResolvConfFile
 doc: DNS Resolver configuration file.
@@ -95,7 +104,9 @@ sources:
   attributes: {paths: ['/etc/resolv.conf']}
 labels: [Configuration Files]
 supported_os: [Linux]
-urls: ['http://man7.org/linux/man-pages/man5/resolv.conf.5.html']
+urls:
+- 'http://man7.org/linux/man-pages/man5/resolv.conf.5.html'
+- 'https://attack.mitre.org/techniques/T1016/'
 ---
 name: HostAccessPolicyConfiguration
 doc: Linux files related to host access policy configuration.
@@ -107,6 +118,7 @@ sources:
       - '/etc/hosts.deny'
 labels: [Configuration Files]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/techniques/T1016/']
 ---
 name: IPTablesRules
 doc: List IPTables rules.
@@ -117,6 +129,7 @@ sources:
     cmd: /sbin/iptables
 labels: [System]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/techniques/T1016/']
 ---
 name: KernelModules
 doc: Kernel modules to be loaded on boot.
@@ -127,6 +140,7 @@ sources:
       - '/etc/modules.conf'
       - '/etc/modprobe.d/*'
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/techniques/T1215/']
 ---
 name: LinuxAtJobs
 doc: Linux at jobs.
@@ -135,6 +149,7 @@ sources:
   attributes: {paths: ['/var/spool/at/*']}
 labels: [Configuration Files]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0003/']
 ---
 name: LinuxAuditLogs
 doc: Linux audit log files.
@@ -143,6 +158,7 @@ sources:
   attributes: {paths: ['/var/log/audit/*']}
 labels: [Logs]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/techniques/T1078/']
 ---
 name: LinuxAuthLogs
 doc: Linux auth log files.
@@ -151,6 +167,7 @@ sources:
   attributes: {paths: ['/var/log/auth.log*']}
 labels: [Logs, Authentication]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/techniques/T1078/']
 ---
 name: LinuxCronLogs
 doc: Linux cron log files.
@@ -159,6 +176,7 @@ sources:
   attributes: {paths: ['/var/log/cron.log*']}
 labels: [Logs]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0003/']
 ---
 name: LinuxCronTabs
 doc: Crontab files.
@@ -171,6 +189,7 @@ sources:
       - '/var/spool/cron/**'
 labels: [Configuration Files]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0003/']
 ---
 name: LinuxDaemonLogFiles
 doc: Linux daemon log files.
@@ -179,6 +198,7 @@ sources:
   attributes: {paths: ['/var/log/daemon.log*']}
 labels: [Logs]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0003/']
 ---
 name: LinuxDistributionRelease
 doc: Linux distribution release information of non-LSB compliant systems.
@@ -193,6 +213,7 @@ sources:
 provides: [os_release, os_major_version, os_minor_version]
 labels: [Software]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxDSDTTable
 doc: Linux file containing DSDT table.
@@ -202,6 +223,7 @@ sources:
 labels: [System]
 urls: ['https://www.kernel.org/doc/Documentation/acpi/initrd_table_override.txt']
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxFstab
 doc: Linux fstab file.
@@ -210,7 +232,9 @@ sources:
   attributes: {paths: ['/etc/fstab']}
 labels: [System, Configuration Files]
 supported_os: [Linux]
-urls: ['http://en.wikipedia.org/wiki/Fstab']
+urls:
+- 'http://en.wikipedia.org/wiki/Fstab'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxGrubConfiguration
 doc: Linux grub configuration file.
@@ -222,7 +246,9 @@ sources:
       - '/boot/grub2/grub.cfg'
 labels: [System, Configuration Files]
 supported_os: [Linux]
-urls: ['https://en.wikipedia.org/wiki/GNU_GRUB']
+urls:
+- 'https://en.wikipedia.org/wiki/GNU_GRUB'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxHostnameFile
 doc: Linux hostname file.
@@ -231,6 +257,7 @@ sources:
   attributes: {paths: ['/etc/hostname']}
 labels: [Configuration Files, System]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/techniques/T1016/']
 ---
 name: LinuxInitrdFiles
 doc: Initrd (initramfs) files in /boot/ executed on startup.
@@ -245,6 +272,7 @@ supported_os: [Linux]
 urls:
   - 'http://en.wikipedia.org/wiki/Initrd'
   - 'https://www.kernel.org/doc/Documentation/initrd.txt'
+  - 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: LinuxIssueFile
 doc: Linux prelogin message and identification (issue) file.
@@ -256,7 +284,9 @@ sources:
       - '/etc/issue.net'
 labels: [Configuration Files, System]
 supported_os: [Linux]
-urls: ['https://linux.die.net/man/5/issue']
+urls:
+- 'https://linux.die.net/man/5/issue'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxKernelLogFiles
 doc: Linux kernel log files.
@@ -265,6 +295,7 @@ sources:
   attributes: {paths: ['/var/log/kern.log*']}
 labels: [Logs]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxLastlogFile
 doc: Linux lastlog file.
@@ -273,6 +304,7 @@ sources:
   attributes: {paths: ['/var/log/lastlog']}
 labels: [Logs, Authentication]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/techniques/T1078/']
 ---
 name: LinuxLSBInit
 doc: Linux LSB-style init scripts.
@@ -285,7 +317,9 @@ sources:
       - '/etc/insserv.conf.d/**'
 labels: [Configuration Files, System]
 supported_os: [Linux]
-urls: ['https://wiki.debian.org/LSBInitScripts']
+urls:
+- 'https://wiki.debian.org/LSBInitScripts'
+- 'https://attack.mitre.org/tactics/TA0003/'
 ---
 name: LinuxLocalTime
 doc: Local time zone configuation
@@ -294,6 +328,7 @@ sources:
   attributes: {paths: ['/etc/localtime']}
 labels: [System]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxLSBRelease
 doc: Linux Standard Base (LSB) release information
@@ -303,7 +338,9 @@ sources:
 provides: [os_release, os_major_version, os_minor_version]
 labels: [Software]
 supported_os: [Linux]
-urls: ['https://linux.die.net/man/1/lsb_release']
+urls:
+- 'https://linux.die.net/man/1/lsb_release'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxMessagesLogFiles
 doc: Linux messages log files.
@@ -312,6 +349,7 @@ sources:
   attributes: {paths: ['/var/log/messages*']}
 labels: [Logs]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxMountCmd
 doc: Linux output of mount
@@ -322,6 +360,7 @@ sources:
     cmd: /bin/mount
 labels: [System]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxMountInfo
 doc: Linux mount options.
@@ -333,6 +372,7 @@ sources:
       - LinuxProcMounts
 labels: [System, Configuration Files]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxPamConfigs
 doc: Configuration files for PAM.
@@ -345,7 +385,9 @@ sources:
       - '/etc/pam.d/*'
 labels: [Authentication, Configuration Files]
 supported_os: [Linux]
-urls: ['http://www.linux-pam.org/']
+urls:
+- 'http://www.linux-pam.org/'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxPasswdFile
 doc: |
@@ -358,6 +400,7 @@ sources:
   attributes: {paths: ['/etc/passwd']}
 labels: [Configuration Files, System]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0006/']
 ---
 name: LinuxRsyslogConfigs
 doc: Linux rsyslog configurations.
@@ -370,7 +413,9 @@ sources:
       - '/etc/rsyslog.d/*'
 labels: [Configuration Files, Logs]
 supported_os: [Linux]
-urls: ['http://www.rsyslog.com/doc/rsyslog_conf.html']
+urls:
+- 'http://www.rsyslog.com/doc/rsyslog_conf.html'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxScheduleFiles
 doc: All Linux job scheduling files.
@@ -383,6 +428,7 @@ sources:
       - LinuxAtJobs
 labels: [Configuration Files]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxServices
 doc: Services running on a Linux system.
@@ -395,6 +441,7 @@ sources:
       - LinuxSysVInit
 labels: [Configuration Files, System]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxSSDTTables
 doc: Linux files containing SSDT table.
@@ -402,7 +449,9 @@ sources:
 - type: FILE
   attributes: {paths: ['/sys/firmware/acpi/tables/SSDT*']}
 labels: [System]
-urls: ['https://www.kernel.org/doc/Documentation/acpi/initrd_table_override.txt']
+urls:
+- 'https://www.kernel.org/doc/Documentation/acpi/initrd_table_override.txt'
+- 'https://attack.mitre.org/tactics/TA0007/'
 supported_os: [Linux]
 ---
 name: LinuxSysLogFiles
@@ -412,6 +461,7 @@ sources:
   attributes: {paths: ['/var/log/syslog.log*']}
 labels: [Logs]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxSyslogNgConfigs
 doc: Linux syslog-ng configurations.
@@ -423,7 +473,9 @@ sources:
       - '/etc/syslog-ng/conf-d/*.conf'
 labels: [Configuration Files, Logs]
 supported_os: [Linux]
-urls: ['http://linux.die.net/man/5/syslog-ng.conf']
+urls:
+- 'http://linux.die.net/man/5/syslog-ng.conf'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxSystemdOSRelease
 doc: Linux systemd /etc/os-release file
@@ -436,7 +488,9 @@ sources:
 provides: [os_release, os_major_version, os_minor_version]
 labels: [Software]
 supported_os: [Linux]
-urls: ['https://www.freedesktop.org/software/systemd/man/os-release.html']
+urls:
+- 'https://www.freedesktop.org/software/systemd/man/os-release.html'
+- 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxSysVInit
 doc: Services started by sysv-style init scripts.
@@ -453,6 +507,7 @@ supported_os: [Linux]
 urls:
   - 'http://savannah.nongnu.org/projects/sysvinit'
   - 'http://docs.oracle.com/cd/E37670_01/E41138/html/ol_svcscripts.html'
+  - 'https://attack.mitre.org/tactics/TA0007/'
 ---
 name: LinuxTimezoneFile
 doc: Linux timezone file.
@@ -461,6 +516,7 @@ sources:
   attributes: {paths: ['/etc/timezone']}
 labels: [Configuration Files, System]
 supported_os: [Linux]
+urls: ['https://attack.mitre.org/tactics/TA0007/']
 ---
 name: LinuxUtmpFiles
 doc: Linux btmp, utmp and wtmp login record files.
@@ -473,7 +529,9 @@ sources:
       - '/var/run/utmp'
 labels: [Logs, Authentication]
 supported_os: [Linux]
-urls: ['https://github.com/libyal/dtformats/blob/master/documentation/Utmp%20login%20records%20format.asciidoc']
+urls:
+- 'https://github.com/libyal/dtformats/blob/master/documentation/Utmp%20login%20records%20format.asciidoc'
+- 'https://attack.mitre.org/techniques/T1078/'
 ---
 name: LinuxWtmp
 doc: Linux wtmp login record file
@@ -483,7 +541,9 @@ sources:
 labels: [Logs, Authentication]
 provides: [users.username, users.last_logon]
 supported_os: [Linux]
-urls: ['https://github.com/libyal/dtformats/blob/master/documentation/Utmp%20login%20records%20format.asciidoc']
+urls:
+- 'https://github.com/libyal/dtformats/blob/master/documentation/Utmp%20login%20records%20format.asciidoc'
+- 'https://attack.mitre.org/techniques/T1078/'
 ---
 name: LinuxXinetd
 doc: Linux xinetd configurations.
